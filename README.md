@@ -85,7 +85,7 @@ python src/train_models.py --input data/customers.csv --outdir outputs --test-si
 ---
 
 ### Confusion Matrix
-<img width="1600" height="960" alt="feature_importance" src="https://github.com/user-attachments/assets/b9c6fa1d-1730-4691-bca5-71808ca9849c" />
+<img width="1120" height="1120" alt="confusion_matrix" src="https://github.com/user-attachments/assets/f9d57d15-ea26-4c95-90a7-5d5d8f9db584" />
 
 ### ROC Curve
 <img width="1280" height="960" alt="roc_curve" src="https://github.com/user-attachments/assets/8af72b6f-d62e-4f5d-b9d3-e5b502a35f3b" />
