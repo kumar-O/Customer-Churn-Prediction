@@ -1,16 +1,17 @@
 # Customer Churn Prediction
-Customer churn prediction with Python using synthetic datasets. Includes data generation, feature engineering, and training with Logistic Regression, Random Forest, and Gradient Boosting. Improved pipeline applies hyperparameter tuning and threshold optimization to boost recall. Outputs metrics, reports, and charts.
 
-Predict customer churn on a synthetic dataset using Python. Includes data generation, feature engineering, model training (Logistic Regression, Random Forest, Gradient Boosting), and **improved training with hyperparameter search + threshold tuning** for better recall on churners. Outputs metrics, reports, and visualizations.
+Predict customer churn on a synthetic dataset using Python. The pipeline includes data generation, feature engineering, model training (Logistic Regression, Random Forest, Gradient Boosting), hyperparameter search, class weighting, selection by PR-AUC, and decision-threshold tuning to balance precision and recall. Outputs metrics, reports, and visualizations.
 
 ---
 
 ## Features
 - Synthetic customer dataset with realistic behavior signals
 - Models: Logistic Regression, Random Forest, Gradient Boosting
-- hyperparameter optimization (RandomizedSearchCV), class weighting, PR-AUC–based model selection, and F2-based threshold tuning
+- Hyperparameter optimization (RandomizedSearchCV) & class weighting
+- Model selection by PR-AUC (Average Precision)
+- Threshold tuning (F2 focus) with precision floor
 - Metrics: Accuracy, Precision, Recall, F1, ROC-AUC, PR-AUC
-- Visuals: ROC curves, Precision-Recall curves, confusion matrix, feature importance
+- Visuals: ROC, Precision-Recall, Confusion Matrix, Feature Importance
 - Saved artifacts: best model (`joblib`) & metrics
 
 ---
@@ -25,7 +26,7 @@ customer-churn-prediction/
 ├─ data/
 │  └─ generate_customers.py
 ├─ src/
-│  ├─ train_models.py            
+│  ├─ train_models.py
 │  └─ utils.py
 └─ outputs/
    └─ figures & reports
@@ -53,55 +54,51 @@ python data/generate_customers.py --n 10000 --seed 42 --out data/customers.csv
 ---
 
 ## Train & Evaluate
-
-### Standard Training
-```bash
-python src/train_models.py --input data/customers.csv --outdir outputs --test-size 0.2 --seed 42
-```
-
-### Improved Training
 ```bash
 python src/train_models.py --input data/customers.csv --outdir outputs --test-size 0.2 --val-size 0.2 --seed 42
 ```
 
 **Outputs**
-- `metrics_improved.json` – model selection, tuned threshold, test metrics
-- `classification_report_improved.txt`
-- `roc_curve_improved.png`
-- `pr_curve_improved.png`
-- `confusion_matrix_improved.png`
-- `feature_importance.png`
-- `best_model_improved.joblib`
+- `outputs/metrics.json` – model choice, tuned threshold, test metrics
+- `outputs/classification_report.txt`
+- `outputs/roc_curve.png`
+- `outputs/pr_curve.png`
+- `outputs/confusion_matrix.png`
+- `outputs/feature_importance.png`
+- `outputs/best_model.joblib`
 
 ---
 
-## Results
+## Final Results (Logistic Regression)
 
-### Key Metrics (Improved Model: Logistic Regression)
+### Key Metrics
 | Metric        | Value |
 |---------------|-------|
-| Accuracy      | **83.9%** |
+| Accuracy      | **83.8%** |
 | ROC-AUC       | **0.823** |
 | PR-AUC (AP)   | **0.562** |
-| Recall (Churn)| **0.501** (↑ from 0.316) |
-| Precision (Churn) | 0.526 |
+| Recall (Churn)| **0.50** |
+| Precision (Churn) | **0.52** |
 
-➡️ Recall for churners improved by ~60%, making the model much better at catching at-risk customers.
+➡️ The model now catches ~50% of churners with precision ~0.52, balancing false positives and recall.
 
 ---
 
 ### Confusion Matrix
-<img width="1120" height="1120" alt="confusion_matrix_improved" src="https://github.com/user-attachments/assets/cc1dc38f-0c83-4b48-89f1-46ec57891168" />
+<img width="1600" height="960" alt="feature_importance" src="https://github.com/user-attachments/assets/b9c6fa1d-1730-4691-bca5-71808ca9849c" />
 
 ### ROC Curve
-<img width="1280" height="960" alt="roc_curve_improved" src="https://github.com/user-attachments/assets/8b35aa42-d40f-4ca8-bbab-7722a6ed2756" />
+<img width="1280" height="960" alt="roc_curve" src="https://github.com/user-attachments/assets/8af72b6f-d62e-4f5d-b9d3-e5b502a35f3b" />
 
 ### Precision-Recall Curve
-<img width="1280" height="960" alt="pr_curve_improved" src="https://github.com/user-attachments/assets/d4d19655-140a-47ce-a42c-c4c328a8c6fd" />
+<img width="1280" height="960" alt="pr_curve" src="https://github.com/user-attachments/assets/24b4145e-2a46-45e6-8ecb-499cb5a2c808" />
+
+### Feature Importance
+<img width="1600" height="960" alt="feature_importance" src="https://github.com/user-attachments/assets/d14697b0-af85-40eb-a9d0-01078996f0d8" />
 
 ---
 
-## 📑 Data Schema
+## Data Schema
 | column                    | description                          |
 |---------------------------|--------------------------------------|
 | customer_id               | unique customer ID                   |
