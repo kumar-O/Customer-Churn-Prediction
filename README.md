@@ -22,7 +22,6 @@ customer-churn-prediction/
 ├─ README.md
 ├─ LICENSE
 ├─ requirements.txt
-├─ .gitignore
 ├─ data/
 │  └─ generate_customers.py
 ├─ src/
